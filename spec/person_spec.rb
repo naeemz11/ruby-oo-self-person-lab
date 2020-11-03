@@ -96,7 +96,7 @@ RSpec.describe 'Person' do
   end
 
   context 'non-attribute instance methods' do
-    let(:penelope) { Person.new('Penelope') }
+    let(:penelope) { Person.new('Penelope') } 
     let(:felix) { Person.new('Felix') }
     let(:people) { [penelope, felix] }
 
@@ -294,8 +294,8 @@ RSpec.describe 'Person' do
         it 'if topic is weather, it makes both people in the convo one point more happy' do
           people.each { |p| p.happiness = 7 }
           penelope.start_conversation(felix, 'weather')
-          people.each { |p| expect(p.happiness).to eq(8) }
-        end
+          people.each { |p| expect(p.happiness).to eq(8) } 
+        end  
 
         it "never makes either party more than 10 points happy
           (hint: use your #happiness= method)" do
